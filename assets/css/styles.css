@@ -1,0 +1,82 @@
+/* Fondo general */
+body {
+  height: 100%; /* Asegura que el body ocupe toda la altura */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+  display: flex;
+  flex-direction: column; /* Para permitir que el footer se mantenga en la parte inferior */
+}
+
+body > .container {
+  margin-bottom: 0; /* Elimina cualquier margen adicional en el contenedor principal */
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* Esto asegura que el footer quede pegado al final de la página */
+  margin-bottom: 0; /* Asegura que no haya margen adicional */
+}
+
+/* Hero con fondo personalizado */
+header {
+  background: linear-gradient(to right, #FF8008, #FFC837);
+  color: white;
+}
+
+.full-height {
+  height: 100vh; /* Altura total de la pantalla */
+  padding-top: 100px; /* Espacio para no tapar el contenido con la navbar fija */
+}
+
+@media (max-width: 768px) {
+  .full-height {
+    padding-top: 120px; /* Más espacio en pantallas pequeñas si es necesario */
+  }
+}
+
+/* IMAGEN LIBROS */
+.header-hero {
+  background: url('/LIBRERIA/assets/libro.png') no-repeat right center;
+  background-size: contain;
+  background-color: #EB8241;
+  color: white;
+  padding: 5rem 0;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Navbar scroll effect */
+.navbar {
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: #fff !important;
+}
+
+/* Custom modal backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.3); /* Reduce la opacidad */
+  z-index: 1040; /* Ajusta el z-index para no interferir con el modal */
+}
+
+.modal-content {
+  position: relative; /* Asegúrate de que el contenido del modal esté por encima de todo */
+  z-index: 1050; /* Asegura que el contenido del modal esté por encima del backdrop */
+}
